@@ -1,0 +1,68 @@
+[
+    {
+      "estate_title": "Luxury Penthouse with Panoramic Views",
+      "id": 1,
+      "segment_name": "Penthouse",
+      "description": "Experience unparalleled luxury living in this exquisite penthouse offering breathtaking panoramic views of the city skyline.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "3,000 sq ft",
+      "location": "Downtown Metropolis",
+      "facilities": ["Spacious living room", "Private rooftop terrace", "Infinity pool", "Gourmet kitchen"],
+      "image": "luxury-penthouse.jpg",
+      "button_text": "View Property"
+    },
+    {
+      "estate_title": "Beachfront Villa Retreat",
+      "id": 2,
+      "segment_name": "Villa",
+      "description": "Escape to paradise in this stunning beachfront villa, offering luxurious amenities and direct access to pristine sandy beaches.",
+      "price": "$8,500,000",
+      "status": "sale",
+      "area": "5,000 sq ft",
+      "location": "Tropical Island Paradise",
+      "facilities": ["Private beach access", "Outdoor entertainment area", "Swimming pool", "Chef's kitchen"],
+      "image": "beachfront-villa.jpg",
+      "button_text": "View Property"
+    },
+    {
+      "estate_title": "Exclusive Resort Oasis",
+      "id": 3,
+      "segment_name": "Resort",
+      "description": "Indulge in ultimate relaxation at this exclusive resort oasis, featuring luxurious accommodations, world-class amenities, and stunning ocean views.",
+      "price": "$12,000,000",
+      "status": "sale",
+      "area": "10 acres",
+      "location": "Tropical Island Retreat",
+      "facilities": ["Luxury spa", "Private villas", "Infinity pools", "Fine dining restaurants"],
+      "image": "luxury-resort.jpg",
+      "button_text": "View Property"
+    },
+    {
+      "estate_title": "Private Island Paradise",
+      "id": 4,
+      "segment_name": "Private Island",
+      "description": "Own your piece of paradise with this exclusive private island retreat, offering pristine beaches, lush landscapes, and unparalleled privacy.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "50 acres",
+      "location": "Remote Island Haven",
+      "facilities": ["Multiple luxury residences", "Helipad", "Yacht dock", "Tropical gardens"],
+      "image": "private-island.jpg",
+      "button_text": "View Property"
+    },
+    {
+      "estate_title": "Luxurious Mansion Estate",
+      "id": 5,
+      "segment_name": "Mansion",
+      "description": "Live in grandeur and opulence in this stunning mansion estate, boasting lavish interiors, expansive grounds, and unparalleled luxury.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "15,000 sq ft",
+      "location": "Exclusive Gated Community",
+      "facilities": ["Grand foyer", "Indoor pool", "Home theater", "Wine cellar"],
+      "image": "luxury-mansion.jpg",
+      "button_text": "View Property"
+    }
+  ]
+  
