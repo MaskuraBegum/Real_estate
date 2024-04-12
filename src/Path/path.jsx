@@ -4,6 +4,7 @@ import {
 import Root from "../Root/Root";
 import Home from "../Routes/Home";
 
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -11,7 +12,8 @@ import Home from "../Routes/Home";
       children:[
         {
             path:'/home',
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader: () => fetch('/poperty.json')
         }
       ]
     },

@@ -9,7 +9,7 @@
       "area": "3,000 sq ft",
       "location": "Downtown Metropolis",
       "facilities": ["Spacious living room", "Private rooftop terrace", "Infinity pool", "Gourmet kitchen"],
-      "image": "luxury-penthouse.jpg",
+      "image": "https://i.ibb.co/0J7wMNf/luxury-penthouse-with-panoramic-view-city-skyline-featuring-sleek-modern-decor-124507-105662.jpg",
       "button_text": "View Property"
     },
     {
@@ -18,11 +18,11 @@
       "segment_name": "Villa",
       "description": "Escape to paradise in this stunning beachfront villa, offering luxurious amenities and direct access to pristine sandy beaches.",
       "price": "$8,500,000",
-      "status": "sale",
+      "status": "rent",
       "area": "5,000 sq ft",
       "location": "Tropical Island Paradise",
       "facilities": ["Private beach access", "Outdoor entertainment area", "Swimming pool", "Chef's kitchen"],
-      "image": "beachfront-villa.jpg",
+      "image": "https://i.ibb.co/mC442Fc/67.jpg",
       "button_text": "View Property"
     },
     {
@@ -35,7 +35,7 @@
       "area": "10 acres",
       "location": "Tropical Island Retreat",
       "facilities": ["Luxury spa", "Private villas", "Infinity pools", "Fine dining restaurants"],
-      "image": "luxury-resort.jpg",
+      "image": "https://i.ibb.co/0nPkRFk/images-6.jpg",
       "button_text": "View Property"
     },
     {
@@ -48,7 +48,7 @@
       "area": "50 acres",
       "location": "Remote Island Haven",
       "facilities": ["Multiple luxury residences", "Helipad", "Yacht dock", "Tropical gardens"],
-      "image": "private-island.jpg",
+      "image": "https://i.ibb.co/xhg1f14/2a.jpg",
       "button_text": "View Property"
     },
     {
@@ -61,8 +61,21 @@
       "area": "15,000 sq ft",
       "location": "Exclusive Gated Community",
       "facilities": ["Grand foyer", "Indoor pool", "Home theater", "Wine cellar"],
-      "image": "luxury-mansion.jpg",
+      "image": "https://i.ibb.co/93WpxHv/574bc9b2-d0e0-43e3-aa71-33287a758b15-f932a3fb-4621-4e69-967c-10151ecf7b28-la-mega-mansion-undergroun.jpg",
       "button_text": "View Property"
-    }
+    },
+    {
+        "estate_title": "Seaside Luxury Retreat",
+        "id": 6,
+        "segment_name": "Beachfront",
+        "description": "Embrace coastal living at its finest in this elegant beachfront retreat, featuring panoramic ocean views and luxurious amenities.",
+        "price": "$9,500,000",
+        "status": "sale",
+        "area": "4,500 sq ft",
+        "location": "Coastal Paradise",
+        "facilities": ["Private beach access", "Oceanfront terrace", "Infinity pool", "Gourmet kitchen"],
+        "image": "https://i.ibb.co/LQvzdW3/images-7.jpg",
+        "button_text": "View Property"
+      }
   ]
   
