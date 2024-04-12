@@ -3,6 +3,7 @@ import {
   } from "react-router-dom";
 import Root from "../Root/Root";
 import Home from "../Routes/Home";
+import Register from "../Routes/Register";
 
 
   const router = createBrowserRouter([
@@ -14,6 +15,10 @@ import Home from "../Routes/Home";
             path:'/home',
             element:<Home></Home>,
             loader: () => fetch('/poperty.json')
+        },
+        {
+            path:'/register',
+            element:<Register></Register>
         }
       ]
     },

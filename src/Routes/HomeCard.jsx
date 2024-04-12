@@ -1,12 +1,15 @@
 import Facility from "./Facility";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+AOS.init();
 
 const HomeCard = ({category}) => {
 
     const {image,estate_title,id,segment_name,description,area,location,price,status,facilities,button_text} = category;
     return (
-        <div>
-            <div className="card bg-base-100 shadow-xl relative h-[780px] space-y-4">
+        <div data-aos="fade-up"
+        data-aos-duration="3000">
+            <div className="card bg-base-100 shadow-xl relative h-[780px] space-y-4 " >
                 <figure><img src={image} alt="Shoes" className="w-full h-[250px]" /></figure>
                 <p className="absolute rounded-r-full bg-green-500 text-xl px-6 py-2 border-2">{status}</p>
                 <div className="card-body">
