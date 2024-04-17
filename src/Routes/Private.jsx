@@ -4,11 +4,16 @@ import {Navigate,useLocation} from 'react-router-dom'
 
 
 const Private = ({children}) => {
-    const{user,loder} = useContext(ProviderContext)
+    const{user,loder,another,setanother,setLoder} = useContext(ProviderContext)
     const location = useLocation();
-    if(loder){
+   
+    if(another==true && loder==true){
+        console.log(another,loder)
+        
         return <span className="loading loading-spinner loading-lg text-center"></span>
     }
+    
+    
     if(user){
         return children;
     }

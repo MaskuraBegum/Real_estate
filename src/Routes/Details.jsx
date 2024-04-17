@@ -4,14 +4,18 @@ import { MdAreaChart } from "react-icons/md";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoMdPricetag } from "react-icons/io";
 import { PiLineSegmentsBold } from "react-icons/pi";
+import { useContext } from 'react';
+import { ProviderContext } from '../provider/Provider';
 
 const Details = () => {
     const views = useLoaderData();
     const {id} = useParams();
     const view = views.find(viewId => viewId.id==id)
+    
     const {estate_title,status,segment_name,large_description,facilities,location,area,price,image} = view;
     return (
         <div>
+            
            <div className="card lg:card-side bg-base-100 shadow-xl gap-10 p-6 items-center my-10 border-t-2 border-green-600 rounded-3xl">
                 <figure ><img className='rounded-2xl min-h-[500px] ' src={image} alt="Album" /></figure>
                 <div className="card-body w-[900px] ">

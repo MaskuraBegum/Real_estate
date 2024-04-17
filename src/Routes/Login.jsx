@@ -25,7 +25,7 @@ const Login = () => {
         singIn(email, password)
             .then(result => {
                 console.log(result);
-                navigate(location?.state  ? location.state :'/home')
+                navigate(location?.state  ? location.state :'/')
             })
             .catch(error => {
                 console.log(error.message)
@@ -37,7 +37,7 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 console.log(result)
-                navigate(location?.state  ? location.state :'/home')
+                navigate(location?.state  ? location.state :'/')
             })
             .catch(error => {
                 console.log(error.message)

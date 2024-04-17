@@ -7,6 +7,8 @@ import Register from "../Routes/Register";
 import Login from "../Routes/Login";
 import Details from "../Routes/Details";
 import Private from "../Routes/Private";
+import Profile from "../Routes/Profile";
+import Update from "../Routes/Update";
 
 
   const router = createBrowserRouter([
@@ -15,7 +17,7 @@ import Private from "../Routes/Private";
       element: <Root></Root>,
       children:[
         {
-            path:'/home',
+            path:'/',
             element:<Home></Home>,
             loader: () => fetch('/poperty.json')
         },
@@ -27,6 +29,14 @@ import Private from "../Routes/Private";
         {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+          path:'/profile',
+          element:<Private><Profile></Profile></Private>
+        },
+        {
+          path:'/update',
+          element:<Private><Update></Update></Private>
         },
         {
             path:'/login',

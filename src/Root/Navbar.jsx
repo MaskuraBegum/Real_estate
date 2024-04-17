@@ -5,23 +5,24 @@ import { ProviderContext } from "../provider/Provider";
 
 
 const Navbar = () => {
-    const{user,setUser,logOut} = useContext(ProviderContext)
+    const { user, setUser, logOut } = useContext(ProviderContext)
 
-    const logingOut =()=>{
+    const logingOut = () => {
         setUser(null)
         logOut()
-        .then(result =>{
-            console.log(result)
-        })
-        .catch(error =>{
-            console.log(error.message)
-        })
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
     }
+    
 
     const navLinks = <>
-        <li><NavLink to='/home'>Home</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/update'>Update profile</NavLink></li>
-        <li><NavLink to='/user'>User profile</NavLink></li>
+        <li><NavLink to='/profile'>User profile</NavLink></li>
         <li><NavLink to='/register'>Register</NavLink></li>
     </>
     return (
@@ -44,15 +45,23 @@ const Navbar = () => {
                     </ul>
                 </div>
                 {
-                    user ? <div className="navbar-end">
-                    <img alt="Tailwind CSS Navbar component" className="w-10 rounded-full" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    // console.log(user.photoURL)
+                }
+                {
 
-                    <button onClick={logingOut}><span className="btn ml-4">Log Out</span></button>
-                    
-                </div>: <div className="navbar-end">
-                    
-                    <Link to='/login'><span className="btn ml-4">Login</span></Link>
-                </div>
+
+                    user ?
+                        <div className="navbar-end">
+
+                            <img src={user && user.photoURL} alt="nai kichu" className="w-10 rounded-full" />
+
+                            < button onClick={logingOut}><span className="btn ml-4">Log Out</span></button>
+
+                        </div> :
+                        <div className="navbar-end">
+
+                            <Link to='/login'><span className="btn ml-4">Login</span></Link>
+                        </div>
                 }
             </div>
         </div>

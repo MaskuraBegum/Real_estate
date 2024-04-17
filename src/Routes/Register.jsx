@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const Register = () => {
-    const { createUser } = useContext(ProviderContext)
+    const { createUser,updateUserProfile } = useContext(ProviderContext)
 
 
 
@@ -18,12 +18,16 @@ const Register = () => {
     } = useForm()
 
     const onSubmit = (data) => {
-        const { email, password } = data;
+        const { email, password,name,image } = data;
         if (/[A-Z]/.test(password)) {
             if (/[a-z]/.test(password)) {
                 if (password.length >= 6) {
                     createUser(email, password)
                         .then(result => {
+                            updateUserProfile(name,image)
+                            .then(()=>{
+
+                            })
                             console.log(result);
                         })
                         .catch(error => {
@@ -78,8 +82,8 @@ const Register = () => {
                                         <span className="label-text">Photo url</span>
                                     </label>
                                     <input type="text" placeholder="Photo url" className="input input-bordered"
-                                        {...register("photo", { required: true })} required />
-                                    {errors.photo && <span className='text-red-500'>This field is required</span>}
+                                        {...register("image", { required: true })} required />
+                                    {errors.image && <span className='text-red-500'>This field is required</span>}
                                 </div>
                                 <div className="form-control">
                                     <label className="label">

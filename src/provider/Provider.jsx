@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
@@ -17,21 +17,36 @@ const githubProvider = new GithubAuthProvider();
 const Provider = ({children}) => {
     const [user,setUser] = useState(null)
     const [loder,setLoder] = useState(true)
+    const [another,setanother] = useState(false)
 
     const createUser = (email,password) =>{
-        
+        setLoder(true)
+        setanother(true)
         return createUserWithEmailAndPassword(auth,email,password)
     }
+    const updateUserProfile = (name,image) =>{
+        setLoder(true)
+        setanother(true)
+        return updateProfile(auth.currentUser,{
+            displayName:name,
+            photoURL: image
+        })
+    }
+
     const singIn = (email,password) =>{
-        
+        setLoder(true)
+        setanother(true)
+        setanother(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
     const googleLogin =() =>{
-       
+       setLoder(false)
+       setanother(true)
         return signInWithPopup(auth,googleProvider)
     }
     const githubLogin =() =>{
-        
+        setLoder(true)
+        setanother(true)
         return signInWithPopup(auth,githubProvider)
     }
     const logOut =()=>{
@@ -45,6 +60,7 @@ const Provider = ({children}) => {
             if(user){
                 setUser(user)
                 setLoder(false);
+                setanother(true);
             }
         })
         return ()=>{
@@ -61,7 +77,10 @@ const Provider = ({children}) => {
          githubLogin,
          logOut,
          loder,
+         another,
+         setanother,
          setLoder,
+         updateUserProfile
     }
     return (
         <div>
