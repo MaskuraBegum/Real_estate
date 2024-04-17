@@ -17,7 +17,7 @@ const Navbar = () => {
                 console.log(error.message)
             })
     }
-    
+
 
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -53,7 +53,10 @@ const Navbar = () => {
                     user ?
                         <div className="navbar-end">
 
-                            <img src={user && user.photoURL} alt="nai kichu" className="w-10 rounded-full" />
+
+                            <div className="tooltip  tooltip-left"  data-tip={user && `Name: ${user.displayName}\n Email:${user.email}`} >
+                                <button className=" btn-ghost rounded-3xl"><img src={user && user.photoURL} alt="nai kichu" className="w-10 h-10 rounded-full" /></button>
+                            </div>
 
                             < button onClick={logingOut}><span className="btn ml-4">Log Out</span></button>
 

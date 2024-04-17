@@ -7,7 +7,7 @@ const Private = ({children}) => {
     const{user,loder,another,setanother,setLoder} = useContext(ProviderContext)
     const location = useLocation();
    
-    if(another==true && loder==true){
+    if(another==false && loder==false){
         console.log(another,loder)
         
         return <span className="loading loading-spinner loading-lg text-center"></span>
