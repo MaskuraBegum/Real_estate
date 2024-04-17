@@ -1,6 +1,7 @@
 import Facility from "./Facility";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Link } from "react-router-dom";
 AOS.init();
 
 const HomeCard = ({category}) => {
@@ -35,7 +36,7 @@ const HomeCard = ({category}) => {
 
                     </div>
                     <div className="card-actions justify-end">
-                        <button className="btn bg-green-500 text-white">{button_text}</button>
+                        <Link to={`/details/${id}`}><button className="btn bg-green-500 text-white">{button_text}</button></Link>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,9 @@ import {
 import Root from "../Root/Root";
 import Home from "../Routes/Home";
 import Register from "../Routes/Register";
+import Login from "../Routes/Login";
+import Details from "../Routes/Details";
+import Private from "../Routes/Private";
 
 
   const router = createBrowserRouter([
@@ -17,8 +20,17 @@ import Register from "../Routes/Register";
             loader: () => fetch('/poperty.json')
         },
         {
+            path:'/details/:id',
+            element:<Private><Details></Details></Private>,
+            loader: () => fetch('/public/poperty.json')
+        },
+        {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+            path:'/login',
+            element:<Login></Login>
         }
       ]
     },
