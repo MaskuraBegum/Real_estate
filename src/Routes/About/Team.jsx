@@ -12,7 +12,7 @@ const Team = () => {
                     <p className=""> A dedicated group of professionals committed to excellence in luxury real estate. With diverse expertise and a shared passion for delivering exceptional service, our team is here to guide you through every step of your real estate journey.</p>
                 </div>
             </div>
-            <div className="flex items-center justify-center gap-20 my-10">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-20 my-10">
                 <div >
                     <img className="w-72 rounded-2xl hover:w-80" src="https://i.ibb.co/kcJKdFk/360-F-325735908-Tkx-HU7okor9-CTWHBhk-Gfd-Rum-ONWf-IDEb.jpg" alt="" />
                     <h1 className="pl-2 text-2xl font-medium my-2">Josh Long</h1>

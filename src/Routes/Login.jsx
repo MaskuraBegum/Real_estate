@@ -70,7 +70,7 @@ const Login = () => {
                 <h1 className="text-4xl font-medium animate__animated animate__heartBeat" ><span className="text-green-800">LogIn</span> now!!</h1>
             </div>
             <div className="hero bg-fixed mt-10 mb-10 " style={{ backgroundImage: 'url(https://i.ibb.co/2vXjhvQ/amarna-resort-pool-ocean-views-1750x1000-jpg.webp)' }}>
-                <div className=" w-[650px] p-6 " >
+                <div className="w-[320px] lg:w-[650px] p-2 lg:p-6 " >
                     <div className="hero-content ">
                         <div className="card  w-full max-w-md shadow-2xl bg-gray-200 opacity-90   ">
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body -mb-8">
@@ -90,7 +90,7 @@ const Login = () => {
                                         {...register("password", { required: true })}
                                         required />
                                     {errors.password && <span className='text-red-500'>This field is required</span>}
-                                    <span className='absolute left-96 bottom-80 top-44' onClick={()=>setshow(!show)}>
+                                    <span className='absolute left-52 lg:left-96 bottom-80 top-44' onClick={()=>setshow(!show)}>
                                         {
                                             show? <FaRegEyeSlash />:<FaRegEye />
                                         }
@@ -111,7 +111,7 @@ const Login = () => {
 
                             </form>
                             <div className='space-y-4 mb-8'>
-                            <div className='flex items-center justify-center gap-8'>
+                            <div className='flex flex-col lg:flex-row items-center justify-center gap-8'>
                                     <div>
                                         <button onClick={googleClick} className='flex items-center btn btn-primary'>Login with <FaGoogle /></button>
                                     </div>
@@ -120,7 +120,7 @@ const Login = () => {
                                     </div>
                                 </div>
                             <div className='text-center '>
-                                <p>Do not have account? Please <Link to='/register'><span className='text-blue-500 font-medium'>Register</span></Link></p>
+                                <p>Do not have account?<br /> Please <Link to='/register'><span className='text-blue-500 font-medium'>Register</span></Link></p>
                             </div>
                             </div>
                         </div>

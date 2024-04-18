@@ -66,7 +66,7 @@ const Register = () => {
                 <h1 className="text-4xl font-medium animate__animated animate__heartBeat" ><span className="text-green-800">Register</span> now!!</h1>
             </div>
             <div className="hero bg-fixed mt-10 mb-10 " style={{ backgroundImage: 'url(https://i.ibb.co/2vXjhvQ/amarna-resort-pool-ocean-views-1750x1000-jpg.webp)' }} >
-                <div className=" w-[650px] p-6 " >
+                <div className="w-[320px] lg:w-[650px] p-0 lg:p-6 " >
                     <div className="hero-content ">
                         <div className="card  w-full max-w-md shadow-2xl bg-gray-200 opacity-90  ">
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -104,7 +104,7 @@ const Register = () => {
                                         {...register("password", { required: true })}
                                         required />
                                     {errors.password && <span className='text-red-500'>This field is required</span>}
-                                    <span className='absolute left-96 bottom-48' onClick={()=>setshow(!show)}>
+                                    <span className='absolute left-52 lg:left-96 bottom-52 lg:bottom-48' onClick={()=>setshow(!show)}>
                                         {
                                             show? <FaRegEyeSlash />:<FaRegEye />
                                         }
