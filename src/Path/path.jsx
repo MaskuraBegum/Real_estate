@@ -9,12 +9,14 @@ import Details from "../Routes/Details";
 import Private from "../Routes/Private";
 import Profile from "../Routes/Profile";
 import Update from "../Routes/Update";
+import Error from "../Routes/Error";
 
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement:<Error></Error>,
       children:[
         {
             path:'/',

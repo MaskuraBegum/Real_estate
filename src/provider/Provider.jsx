@@ -18,6 +18,7 @@ const Provider = ({children}) => {
     const [user,setUser] = useState(null)
     const [loder,setLoder] = useState(true)
     const [another,setanother] = useState(false)
+    const [show, setshow] = useState(false)
 
     const createUser = (email,password) =>{
         setLoder(true)
@@ -78,6 +79,8 @@ const Provider = ({children}) => {
          logOut,
          loder,
          another,
+         show,
+         setshow,
          setanother,
          setLoder,
          updateUserProfile

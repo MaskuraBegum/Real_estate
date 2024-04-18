@@ -45,7 +45,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 {
-                    // console.log(user.photoURL)
+                    // console.log(user.displayName)
                 }
                 {
 

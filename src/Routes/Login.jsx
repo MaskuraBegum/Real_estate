@@ -6,10 +6,16 @@ import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import {useLocation,useNavigate} from 'react-router-dom'
+import { FaRegEye } from "react-icons/fa6";
+import { FaRegEyeSlash } from "react-icons/fa6";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from 'react-helmet-async';
+
 
 
 const Login = () => {
-    const { singIn, googleLogin, githubLogin } = useContext(ProviderContext)
+    const { singIn, googleLogin, githubLogin,show,setshow } = useContext(ProviderContext)
     const location = useLocation()
     const navigate = useNavigate()
 
@@ -25,10 +31,11 @@ const Login = () => {
         singIn(email, password)
             .then(result => {
                 console.log(result);
+                toast('Successfully logged in');
                 navigate(location?.state  ? location.state :'/')
             })
             .catch(error => {
-                console.log(error.message)
+                toast(error.message)
             })
 
     }
@@ -37,23 +44,28 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 console.log(result)
+                toast('Successfully logged in');
                 navigate(location?.state  ? location.state :'/')
             })
             .catch(error => {
-                console.log(error.message)
+                toast(error.message)
             })
     }
     const githubClick = () => {
         githubLogin()
         .then(result =>{
             console.log(result)
+            toast('Successfully logged in');
         })
         .catch(error =>{
-            console.log(error.message)
+            toast(error.message)
         })
     }
     return (
         <div>
+            <Helmet>
+                <title>RoyalNest | LogIn</title>
+            </Helmet>
             <div className="flex justify-center items-center mt-10">
                 <h1 className="text-4xl font-medium animate__animated animate__heartBeat" ><span className="text-green-800">LogIn</span> now!!</h1>
             </div>
@@ -74,10 +86,15 @@ const Login = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" placeholder="password" className="input input-bordered"
+                                    <input type={show ? 'text':'password'} placeholder="password" className="input input-bordered"
                                         {...register("password", { required: true })}
                                         required />
                                     {errors.password && <span className='text-red-500'>This field is required</span>}
+                                    <span className='absolute left-96 bottom-80 top-44' onClick={()=>setshow(!show)}>
+                                        {
+                                            show? <FaRegEyeSlash />:<FaRegEye />
+                                        }
+                                    </span>
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>
@@ -111,6 +128,7 @@ const Login = () => {
                 </div>
 
             </div>
+            <ToastContainer />
         </div>
     );
 };

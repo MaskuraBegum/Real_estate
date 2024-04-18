@@ -3,11 +3,16 @@ import { useContext } from 'react';
 import { ProviderContext } from '../provider/Provider';
 import { useForm } from "react-hook-form"
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaRegEye } from "react-icons/fa6";
+import { FaRegEyeSlash } from "react-icons/fa6";
+import { Helmet } from 'react-helmet-async';
 
 
 
 const Register = () => {
-    const { createUser,updateUserProfile } = useContext(ProviderContext)
+    const { createUser,updateUserProfile,setUser,user, show,setshow } = useContext(ProviderContext)
 
 
 
@@ -25,25 +30,28 @@ const Register = () => {
                     createUser(email, password)
                         .then(result => {
                             updateUserProfile(name,image)
-                            .then(()=>{
-
+                                .then((result)=>{
+                                    console.log(name,image)
+                                    setUser({...user,displayName:name,phoURL:image})
+                                    console.log('from reg update',result)
                             })
-                            console.log(result);
+                            console.log(result)
+                            toast('Successfully registered');
                         })
                         .catch(error => {
-                            console.log(error.message);
+                            toast(error.message);
                         })
                 }
                 else{
-                    alert('password length must be six')
+                    toast("The password must contain a uppercase, a lowercase and length must be 6");
                 }
             }
             else{
-                alert('must have lowercase')
+                toast("The password must contain a uppercase, a lowercase and length must be 6");
             }
         }
         else{
-            alert('must have uppercase')
+            toast("The password must contain a uppercase, a lowercase and length must be 6");
         }
 
 
@@ -51,6 +59,9 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>RoyalNest | Register</title>
+            </Helmet>
             <div className="flex justify-center items-center mt-10">
                 <h1 className="text-4xl font-medium animate__animated animate__heartBeat" ><span className="text-green-800">Register</span> now!!</h1>
             </div>
@@ -89,10 +100,15 @@ const Register = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" placeholder="password" className="input input-bordered"
+                                    <input type={show ? 'text':'password'} placeholder="password" className="input input-bordered relative"
                                         {...register("password", { required: true })}
                                         required />
                                     {errors.password && <span className='text-red-500'>This field is required</span>}
+                                    <span className='absolute left-96 bottom-48' onClick={()=>setshow(!show)}>
+                                        {
+                                            show? <FaRegEyeSlash />:<FaRegEye />
+                                        }
+                                    </span>
                                     <label className="label">
                                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                     </label>
@@ -109,6 +125,7 @@ const Register = () => {
                 </div>
 
             </div>
+            <ToastContainer />
         </div>
     );
 };
