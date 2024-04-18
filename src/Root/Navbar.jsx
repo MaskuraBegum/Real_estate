@@ -60,12 +60,12 @@ const Navbar = () => {
                                 <button className=" btn-ghost rounded-3xl"><img src={user && user.photoURL} alt="nai kichu" className="w-10 h-10 rounded-full" /></button>
                             </div>
 
-                            < button onClick={logingOut}><span className="btn ml-4">Log Out</span></button>
+                            < button onClick={logingOut}><span className="btn ml-4  bg-green-400">Log Out</span></button>
 
                         </div> :
                         <div className="navbar-end">
 
-                            <Link to='/login'><span className="btn ml-4">Login</span></Link>
+                            <Link to='/login'><span className="btn ml-4 bg-green-400">Login</span></Link>
                         </div>
                 }
             </div>
