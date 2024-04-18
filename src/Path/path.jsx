@@ -10,6 +10,7 @@ import Private from "../Routes/Private";
 import Profile from "../Routes/Profile";
 import Update from "../Routes/Update";
 import Error from "../Routes/Error";
+import AboutUs from "../Routes/AboutUs";
 
 
   const router = createBrowserRouter([
@@ -35,6 +36,10 @@ import Error from "../Routes/Error";
         {
           path:'/profile',
           element:<Private><Profile></Profile></Private>
+        },
+        {
+          path:'/about',
+          element:<Private><AboutUs></AboutUs></Private>
         },
         {
           path:'/update',
