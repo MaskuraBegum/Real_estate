@@ -1,5 +1,6 @@
 
 import 'animate.css';
+import { Link } from 'react-router-dom';
 
 const Hader = () => {
     return (
@@ -38,6 +39,7 @@ const Hader = () => {
                 <div className='animate__animated animate__pulse p-12 '>
                     <h1 className="text-7xl text-black font-bold">Indulge in <br /><span className='text-green-900'> Unparalleled Luxury</span></h1>
                     <p className='text-2xl text-black font-semibold'>Explore Our Exclusive Collection of Prestigious Properties</p>
+                    <Link to='/about'><button className='px-6 py-4 rounded-xl bg-green-900 my-4 text-white'>Learn About Us</button></Link>
                 </div>
             </div>
         </div>

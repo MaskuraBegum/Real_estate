@@ -4,6 +4,9 @@ import { TbTargetArrow } from "react-icons/tb"
 const Header = () => {
     return (
         <div>
+            <div className="flex justify-center items-center my-10">
+                <h1 className="text-4xl font-medium animate__animated animate__heartBeat" ><span className="text-green-800">About</span> Us!!</h1>
+            </div>
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/J7Lqqvw/JUn-Ihx-SLp-Ua-Aam-Wa.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content flex gap-20 items-center justify-around text-left text-neutral-content">
