@@ -4,7 +4,7 @@ RoyalNest is a luxury real estate platform that offers exclusive access to prest
 
 ## Live Link
 
-You can access the live version of RoyalNest [here](https://thunderous-melba-9d02c3.netlify.app/about).
+You can access the live version of RoyalNest [here](https://thunderous-melba-9d02c3.netlify.app/).
 
 ## Features
 
